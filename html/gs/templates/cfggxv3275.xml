@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gs_provision version="1">
+ <config version="1">
+   <P271>1</P271>
+   <P270>##BUSINESS##</P270>
+   <P47>##VOIP_SERVER##</P47>
+   <P33>*97</P33>
+   <P35>##EXTENSION##</P35>
+   <P36>##EXTENSION##</P36>
+   <P34>##ACCOUNT1_PASS##</P34>
+   <P3>##SERVICE##</P3>
+   <P192>##CONFIG_SERVER##</P192>
+   <P212>1</P212>
+
+
+   <P7050>1</P7050>
+   <P7051>##VPN SERVER##</P7051>
+   <P7052>##VPN PORT##</P7052>
+   <P2912>0</P2912>
+   <P8396>2</P8396>
+   <P8394></P8394>
+   <P8395></P8395>
+   <P9902></P9902>
+   <P9903></P9903>
+   <P9904></P9904>
+
+
+
+
+
+ </config>
+</gs_provision>

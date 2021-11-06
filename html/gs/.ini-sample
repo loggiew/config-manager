@@ -1,0 +1,16 @@
+[default]
+CONFIG_SERVER = config.thiscluster.com/gs/
+BUSINESS = Demo Business
+SERVICE = Stuff We Do
+ACCOUNT1_PASS = my_pass
+EXTENSION = 1234
+VOIP_SERVER = voip.thiscluster.com
+FILENAME = cfggxv3275.xml
+
+
+[000b827394af]
+CONFIG_SERVER = config.thiscluster.com/gs/
+BUSINESS = ThisCluster
+SERVICE = Lawn Service
+ACCOUNT1_PASS = a_very_strong_password
+EXTENSION = 1001
