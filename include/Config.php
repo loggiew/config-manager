@@ -15,7 +15,7 @@ class Config {
     public $filetype;
     public $formats;
 
-    function __construct() {
+    function __construct($User_Keys = null, $precedence = 0) {
         $this->ini_config = parse_ini_file(".ini", true);
         $this->filepath = "templates";
         $this->filename = $this->ini_config["default"]["FILENAME"];
@@ -51,7 +51,10 @@ class Config {
 
         $config = $this->mapDefaults($config);
         $config = $this->mapConfig($config);
-        $config = $this->mapBrowser($config);
+        if ($User_Keys !== null) {
+            $config = $this->mapKeys($User_Keys, $config);
+        }
+        $config = $this->mapKeys($_GET, $config);
         $this->device_config = $config;
     } 
 
@@ -92,11 +95,13 @@ class Config {
         return $config;
     }
 
-    public function mapBrowser($config) {
-        foreach ($_GET as $key => $value) {
+    public function mapKeys($keys, $config = null) {
+        if ($config === null) { $config = $this->device_config; }
+        foreach ($keys as $key => $value) {
             $key_upper = strtoupper($key);
             $config[$key_upper] = $value;
         }
+        $this->device_config = $config;
         return $config;
     }
 }
