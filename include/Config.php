@@ -76,6 +76,7 @@ class Config {
                 $config[$option] = $setting;
             }
         }
+        return $config;
     }
 
     public function mapConfig($config) {
