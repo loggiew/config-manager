@@ -1,8 +1,8 @@
 <?php
 
-require("../../include/api.php");
+require("../../include/Config.php");
 
-$Display = new Api;
+$Display = new Config;
 
 echo $Display->template();
 
