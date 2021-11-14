@@ -70,14 +70,6 @@ class Config {
         return $template;
     }
 
-    public function mapBrowser($config) {
-        foreach ($_GET as $key => $value) {
-            $key_upper = strtoupper($key);
-            $config[$key_upper] = $value;
-        }
-        return $config;
-    }
-
     public function mapDefaults($config) {
         foreach ($this->ini_config["default"] as $option => $setting) {
             if (empty($config[$option])) {
@@ -95,6 +87,14 @@ class Config {
             }
         } else {
             $config = $this->ini_config["default"];
+        }
+        return $config;
+    }
+
+    public function mapBrowser($config) {
+        foreach ($_GET as $key => $value) {
+            $key_upper = strtoupper($key);
+            $config[$key_upper] = $value;
         }
         return $config;
     }
